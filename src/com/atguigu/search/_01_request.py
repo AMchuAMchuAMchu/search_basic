@@ -1,7 +1,7 @@
 # -*- coding = utf-8 -*-
 # @Time : 2022/9/6 8:19
 # @Author : 02雪乃赤瞳楪祈校条祭制作委员会
-# @File : _01_basic01.py
+# @File : _01_request.py
 # @Software : PyCharm
 
 import urllib.request as rq

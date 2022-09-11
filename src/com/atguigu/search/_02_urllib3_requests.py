@@ -1,7 +1,7 @@
 # -*- coding = utf-8 -*-
 # @Time : 2022/9/6 9:35
 # @Author : 02雪乃赤瞳楪祈校条祭制作委员会
-# @File : _02_basic02.py
+# @File : _02_urllib3_requests.py
 # @Software : PyCharm
 
 import urllib3 as ul3
