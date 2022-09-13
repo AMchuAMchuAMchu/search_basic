@@ -31,7 +31,7 @@ headers = {'User-Agent':'Mozilla/5.0 (Windows NT 10.0; Win64; x64)'
 # url='https://top.baidu.com/board?platform=pc&sa=pcindex_entry',headers=headers)
 
 response = requests.request(method='get',
-                            url='https://www.bilibili.com/account/history?spm_id_from=333.1007.0.0',
+                            url='https://www.bilibili.com/v/douga/?spm_id_from=333.1007.0.0',
                             headers=headers)
 
 print(response.ok)
