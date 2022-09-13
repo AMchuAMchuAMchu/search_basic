@@ -19,14 +19,18 @@ from bs4 import BeautifulSoup
 #
 # etree = etree.HTML(html.text)
 
-headers = {'User-Agent':'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/104.0.5112.102 Safari/537.36 Edg/104.0.1293.70'}
+headers = {'User-Agent':'Mozilla/5.0 (Windows NT 10.0; Win64; x64)'
+                        ' AppleWebKit/537.36 (KHTML, like Gecko) '
+                        'Chrome/104.0.5112.102 Safari/537.36 Edg/104.0.1293.70'}
 
-# 爬取第一财经的网页信息
+# 1.0 爬取第一财经的网页信息
 # response = requests.get('https://www.yicai.com/')
 
-# 爬取百度热搜的信息
-response = requests.request(method='get',
-url='https://top.baidu.com/board?platform=pc&sa=pcindex_entry',headers=headers)
+# 2.0 爬取百度热搜的信息
+# response = requests.request(method='get',
+# url='https://top.baidu.com/board?platform=pc&sa=pcindex_entry',headers=headers)
+
+response = requests.request(method='get',url='https://www.bilibili.com/account/history?spm_id_from=333.1007.0.0',headers=headers)
 
 print(response.ok)
 
@@ -34,14 +38,19 @@ print(response.status_code)
 
 response.encoding = 'utf-8'
 
-
 soup = BeautifulSoup(response.text,'html.parser')
 
-for history in soup.select('.item-wrap_2oCLZ'):
-    print(history.select('.c-single-text-ellipsis'))
+
+for his in soup.select('.r-txt'):
+    print(his.select('a')[0].text.trim())
 
 
-# 对爬取到的第一次财经的信息进行处理...
+# 2.0 对爬取的百度热搜的信息进行处理展示
+# for history in soup.select('.item-wrap_2oCLZ'):
+#     print(history.select('.c-single-text-ellipsis'))
+
+
+# 1.0 对爬取到的第一次财经的信息进行处理...
 # for news in soup.select('.m-list'):
 #     print(news.select('h2'))
 
