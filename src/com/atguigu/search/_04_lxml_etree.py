@@ -30,7 +30,9 @@ headers = {'User-Agent':'Mozilla/5.0 (Windows NT 10.0; Win64; x64)'
 # response = requests.request(method='get',
 # url='https://top.baidu.com/board?platform=pc&sa=pcindex_entry',headers=headers)
 
-response = requests.request(method='get',url='https://www.bilibili.com/account/history?spm_id_from=333.1007.0.0',headers=headers)
+response = requests.request(method='get',
+                            url='https://www.bilibili.com/account/history?spm_id_from=333.1007.0.0',
+                            headers=headers)
 
 print(response.ok)
 
@@ -40,9 +42,14 @@ response.encoding = 'utf-8'
 
 soup = BeautifulSoup(response.text,'html.parser')
 
+file = open(file=r'D:\seldom\rd\Python_ProjectAll\search_basic\src\com\atguigu\assets\his.txt',mode='w',encoding='utf-8')
 
-for his in soup.select('.r-txt'):
-    print(his.select('a')[0].text.trim())
+print(soup)
+
+file.write(soup.text)
+
+for his in soup.select('.r-info clearfix'):
+    print(his.select('.title'))
 
 
 # 2.0 对爬取的百度热搜的信息进行处理展示
