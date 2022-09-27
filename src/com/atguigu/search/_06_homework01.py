@@ -37,3 +37,6 @@ for info in soup.select('tr'):
         type = info.select('td')[3].text.strip()#办学类型
         score = info.select('td')[4].text.strip()#得分
         print(rank,'    ',cn_name,'    ',en_name,'    ',brand,' ',address,' ',type,' ',score)
+
+
+
