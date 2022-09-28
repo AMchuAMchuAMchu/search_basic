@@ -13,11 +13,10 @@ result = requests.request(method='get',url='https://www.meiju56.com/')
 
 print(result.status_code)
 
+result.encoding = 'utf-8'
+
 movies = BeautifulSoup(result.text,features='html.parser')
-
-for item in movies.select('.module-item'):
-    print(item.text)
-
-
-
-
+i = 0
+for item in movies.select('.module-item-title'):
+    i += 1
+    print(i,'>>',item.text)
