@@ -8,6 +8,8 @@
 from itemadapter import ItemAdapter
 
 
-class MoviePipeline:
+class MoviePipeline(object):
     def process_item(self, item, spider):
-        return item
+        with open(file="d:/my_meiju.txt",encoding='utf-8',mode='a') as fp:
+            print(type(item['name']))
+            fp.write(item['name'] + "\n")
