@@ -15,7 +15,16 @@ print(result.status_code)
 
 result.encoding = 'utf-8'
 
-
+res_bs = BeautifulSoup(result.text,'html.parser')
+count = -1
+file_save = open(file='d:/meijut.xlsx',encoding='utf-8',mode='w')
+for item in res_bs.select('h5'):
+    count+=1#第一个不是!!
+    if count >= 1:
+        file_save.writelines(item.text)
+        file_save.write('\n')
+        print(count,'>>',item.text)
+    pass
 
 
 
