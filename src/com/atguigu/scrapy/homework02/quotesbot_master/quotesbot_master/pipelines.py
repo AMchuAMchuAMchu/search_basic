@@ -8,7 +8,6 @@
 from itemadapter import ItemAdapter
 
 
-class MoviePipeline(object):
+class QuotesbotMasterPipeline:
     def process_item(self, item, spider):
-        with open(file='my_meiju.txt',mode='a') as fp:
-            fp.write(item['name'].encode('utf-8')+'\n')
+        return item
