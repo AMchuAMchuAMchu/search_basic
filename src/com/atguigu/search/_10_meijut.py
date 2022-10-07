@@ -9,7 +9,7 @@
 import requests
 from bs4 import BeautifulSoup
 
-result = requests.request(method='get',url='http://meijut.cc/label/hit.html')
+result = requests.request(method='get',url='http://meijut.cc/label/news.html')
 
 print(result.status_code)
 
