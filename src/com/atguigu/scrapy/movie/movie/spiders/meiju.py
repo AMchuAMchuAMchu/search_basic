@@ -11,7 +11,7 @@ class MeijuSpider(scrapy.Spider):
         print('========')
         print('========')
         print('========')
-        print(movies)
+        print(movies.extract())
         print('========')
         print('========')
         print('========')
@@ -19,3 +19,4 @@ class MeijuSpider(scrapy.Spider):
             item = MovieItem()
             item['name'] = each_movie.xpath('./h5/a/@title').extract()[0]
             yield item
+
