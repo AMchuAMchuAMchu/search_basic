@@ -10,5 +10,5 @@ from itemadapter import ItemAdapter
 
 class MoviePipeline(object):
     def process_item(self, item, spider):
-        with open(file='my_meiju.txt',mode='a') as fp:
+        with open(file='d:/demo/my_meiju.txt',mode='w') as fp:
             fp.write(item['name'].encode('utf-8')+'\n')

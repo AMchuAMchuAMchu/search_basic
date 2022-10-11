@@ -1,6 +1,5 @@
 import scrapy
 from items import MovieItem
-
 class MeijuSpider(scrapy.Spider):
     name = 'meiju'
     allowed_domains = ['meijut.cc']
@@ -11,6 +10,8 @@ class MeijuSpider(scrapy.Spider):
         print('========')
         print('========')
         print('========')
+
+
         print(movies.extract())
         print('========')
         print('========')
