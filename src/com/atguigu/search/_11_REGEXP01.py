@@ -7,7 +7,9 @@
 
 import re
 
-res = re.findall(pattern='((0\d{2}|0\d{3})-(\d{8}|\d{6}))',string='电话号码021-62232333')
-res01 = list(res)
-print(res01[0][0])
+# res = re.findall(pattern='((0\d{2}|0\d{3})-(\d{8}|\d{6}))',string='电话号码021-62232333')
+# res01 = list(res)
+# print(res01[0][0])
 
+res02 = re.findall(pattern='\d{1,3}[.]\d{1,3}[.]\d{1,3}[.]\d{1,3}',string='莉可丽丝19.168.200.171果咩~^_^')
+print(res02)
