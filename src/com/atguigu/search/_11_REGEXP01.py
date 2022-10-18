@@ -11,5 +11,5 @@ import re
 # res01 = list(res)
 # print(res01[0][0])
 
-res02 = re.findall(pattern='\d{1,3}[.]\d{1,3}[.]\d{1,3}[.]\d{1,3}',string='莉可丽丝19.168.200.171果咩~^_^')
+res02 = re.findall(pattern='\d{1,3}[.]\d{1,3}[.]\d{1,3}[.]\d{1,3}',string='莉可丽丝192.168.200.171果咩~^_^')
 print(res02)
